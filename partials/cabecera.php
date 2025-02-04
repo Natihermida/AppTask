@@ -1,5 +1,12 @@
 <?php
-
+session_start();
+if (isset($_SESSION["username"])) {
+    $username = $_SESSION["username"];
+} else {
+    header("Location: index");
+    exit();
+}
+include("conexiondb.php");
 ?>
 
 <!DOCTYPE html>
