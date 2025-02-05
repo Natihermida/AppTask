@@ -32,6 +32,7 @@ include("./partials/cabecera.php");
                         <th>Descripcion</th>
                         <th>Fecha Inicio</th>
                         <th>Fecha Fin</th>
+                        <th>Estado</th>
                         <th>Operaciones</th>
                     </thead>
                     <tbody id="tbodyTareas">
@@ -43,8 +44,8 @@ include("./partials/cabecera.php");
                             <td>".$row['descripcion']."</td>
                             <td>".$row['fecha_inicio']."</td>
                             <td>".$row['fecha_fin']."</td>
-                          
-                            <td>
+                            <td>".$row['estado']."</td>
+                                                      <td>
                                 <a href='borrar_tareas.php?tareas=".$row['id']."'><i class='fa-solid fa-trash'></i></a>
                                 <a href='editar_tareas.php?tareas=".$row['id']."'<i class='fa-solid fa-pen-to-square'></i></a>
                             </td>
