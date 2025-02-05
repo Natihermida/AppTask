@@ -21,7 +21,7 @@
 <body>
     <header>
         <h1>AppTask</h1>
-        <img src="img/tareas.jpg" alt="logo Task">
+        <a href="index.php"><img src="img/tareas.jpg" alt="logo Task"></a>
     </header>
     <nav>
         <a href="index.php">Inicio</a>
