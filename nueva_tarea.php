@@ -2,7 +2,7 @@
 // if(isset($_POST["fecha"])){
     // session_start();
     include("conexiondb.php");
-    $idusuario = 2;//$_SESSION['idusuario'];
+    $idusuario = 3;//$_SESSION['id'];
     $titulo= $_POST["titulo"];
     $descripcion = $_POST["descripcion"];
     $fecha = $_POST["fecha_inicio"];
