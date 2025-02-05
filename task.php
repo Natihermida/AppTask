@@ -1,8 +1,8 @@
 <?php
-/*session_start();
+session_start();
 if (!isset($_SESSION["usuario"])) {
     header("Location: login.php");
-}*/
+}
 include("conexiondb.php");
 $sql = "select * from tareas";
 $result = $conexion->query($sql);
