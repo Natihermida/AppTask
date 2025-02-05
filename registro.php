@@ -1,5 +1,6 @@
 <?php
 include 'partials/cabecera.php';
+include "header.php";
 if(isset($_POST["nombre"])){
     include("conexiondb.php");
     $sql="INSERT INTO usuarios (nombre, apellido, email, password) VALUES (:nombre, :apellido, :email, :password)";  

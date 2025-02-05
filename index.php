@@ -1,6 +1,7 @@
 <?php
 include("conexiondb.php");
 include 'partials/cabecera.php';
+include "header.php";
 
 ?>
 

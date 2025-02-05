@@ -1,7 +1,7 @@
 <?php
 include 'partials/cabecera.php';
 include "conexiondb.php";  // Asegúrate de que en este archivo estés creando la conexión con PDO correctamente
-
+include "header.php";
 // Comprobar si el formulario ha sido enviado
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Recibir los datos del formulario
