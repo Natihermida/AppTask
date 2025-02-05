@@ -4,7 +4,7 @@ if (!isset($_SESSION["email"])) {
     header("Location: login.php");
 }
 include("conexiondb.php");
-$sql = "select * from tareas";
+$sql = "select * from tareas where usuarios_id = " . $_SESSION["id"];
 $result = $conexion->query($sql);
 include("./partials/cabecera.php");
 ?>

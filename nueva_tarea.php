@@ -1,8 +1,8 @@
 <?php
-// if(isset($_POST["fecha"])){
-    // session_start();
+if(isset($_POST["fecha_inicio"])){
+    session_start();
     include("conexiondb.php");
-    $idusuario = 3;//$_SESSION['id'];
+    $idusuario = $_SESSION['id'];
     $titulo= $_POST["titulo"];
     $descripcion = $_POST["descripcion"];
     $fecha = $_POST["fecha_inicio"];
@@ -21,9 +21,7 @@
     $stmt->execute();
     $conexion = null;
     header("Location: task.php");
-    /*
 }else{
     header("Location: task.php");
 }
-*/
 ?>
