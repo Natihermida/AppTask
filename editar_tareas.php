@@ -1,15 +1,17 @@
 <?php
-include("cabecera.php");
-include("coneciondb.php");
+ob_start();  // Comienza el almacenamiento en búfer de salida
+include('./partials/cabecera.php');
+include("conexiondb.php");
+
 session_start();
 if (!isset($_SESSION["email"])) {
     header("Location: login.php");
+    exit(); // Detener la ejecución aquí si no hay sesión
 }
-?>
-<?php
+
 // Verifica si se ha pasado un ID de tarea en la URL
-if (isset($_GET['id'])) {
-    $tareas_id = $_GET['id'];
+if (isset($_GET['tareas_id'])) {
+    $tareas_id = $_GET['tareas_id'];
 
     // Buscar la tarea con el ID pasado
     $sql = "SELECT * FROM tareas WHERE tareas_id = :tareas_id AND usuarios_id = :usuarios_id";
@@ -49,19 +51,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bindParam(':usuarios_id', $_SESSION['id'], PDO::PARAM_INT);
     
     if ($stmt->execute()) {
-        header("Location: index.php"); // Redirigir después de la actualización
+        header("Location: task.php"); // Redirigir después de la actualización
+        exit(); // Detener la ejecución posterior
     } else {
         echo 'Error al actualizar la tarea.';
     }
 }
-
-include("./partials/cabecera.php");
 ?>
 
 <section class="containerTask">
     <h3>Editar Tarea</h3>
     <div class="tareas">
-        <form action="editar_tarea.php?id=<?php echo $tareas_id; ?>" method="POST" id="formTareas">
+        <form action="" method="POST" id="formTareas">
+            <input type="hidden" name="tareas_id" value="<?php echo $task['tareas_id']; ?>">
             <label for="titulo">Título</label>
             <input required type="text" name="titulo" id="titulo" value="<?php echo htmlspecialchars($task['titulo']); ?>">
 
@@ -86,5 +88,7 @@ include("./partials/cabecera.php");
 </section>
 
 <?php
+ob_end_flush();  // Finaliza el almacenamiento en búfer y envía la salida al navegador
 include 'partials/footer.php';
 ?>
+
