@@ -1,5 +1,18 @@
 <?php
 include 'partials/cabecera.php';
+if(isset($_POST["nombre"])){
+    include("conexiondb.php");
+    $sql="INSERT INTO usuarios (nombre, apellido, email, password) VALUES (:nombre, :apellido, :email, :password)";  
+    $stm=$conexion->prepare($sql);
+    $stm->bindParam(":nombre", $_POST["nombre"]);
+    $stm->bindParam(":apellido", $_POST["apellido"]);
+    $stm->bindParam("email", $_POST["email"]);
+    $hashed_password = password_hash($_POST["password"], PASSWORD_DEFAULT);
+    $stm->bindParam("password", $hashed_password);  
+    $stm->execute();
+    header("Location: task.php");
+    exit(); 
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -16,7 +29,7 @@ include 'partials/cabecera.php';
         <label for="apellido">Apellido</label>
         <input type="text" name="apellido" id="apellido" required placeholder="Apellido">
         <label for="email">Email</label>
-        <input type="email" name="email" id="email" required placeholder="Email">
+        <input type="email" name="email" id="email" required placeholder="El email es tu usuario">
         <label for="password"><strong>Contraseña</strong></label>
         <input type="password" name="password" id="password" required placeholder="Contraseña">
         <label for="password2"><strong>Repite la contraseña</strong></label>
