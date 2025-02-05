@@ -1,0 +1,38 @@
+/* estilos.css */
+
+.containerTask {
+    width: 100%;
+}
+
+.containerTask h3 {
+    width: 100%;
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+.contenedordivs {
+    display: flex;
+    gap: 20px;
+}
+
+.tareas {
+    width: 30%;
+    padding: 20px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+.lista {
+    flex: 1;
+     padding: 20px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+.tareas form{
+    width: 90%;
+    justify-content: center;
+    text-align: center;
+}
+#tablaTareas{
+    width: 90%;
+    border-collapse: collapse;
+}
