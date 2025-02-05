@@ -10,6 +10,7 @@ include("./partials/cabecera.php");
 ?>
 <div>
     <a href="logout.php">Cerrar sesión</a>
+    <a href="editar_usuario.php?usuarios_id=<?php echo $_SESSION["id"] ?>">Editar Usuario</a>
 </div>
 <section class="containerTask">
     <h3>Tareas</h3>
