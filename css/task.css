@@ -1,7 +1,12 @@
-/* estilos.css */
 
 .containerTask {
-    width: 100%;
+    margin: 0;
+    background-image: url('../img/Calendario.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    height: 100vh;
 }
 
 .containerTask h3 {
@@ -35,4 +40,55 @@
 #tablaTareas{
     width: 90%;
     border-collapse: collapse;
+}
+.logoutEdit{
+    display: flex;
+   justify-content: right;
+   text-align: center;
+}
+.logoutEdit a{
+    margin-left: 20px;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+
+#tablaTareas {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tablaTareas tr:nth-child(even) {
+    background-color: #f2f2f2; 
+}
+
+#tablaTareas tr:nth-child(odd) {
+    background-color: #ffffff; 
+}
+
+
+#tablaTareas th, #tablaTareas td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd; 
+}
+
+
+#tablaTareas th {
+    background-color: #4CAF50; 
+    color: white; 
+}
+
+#tablaTareas td:last-child {
+    text-align: center; 
+}
+
+#tablaTareas td a {
+    margin: 0 10px; 
+    color: #333; 
+    font-size: 16px; 
+    text-decoration: none; 
+}
+#tablaTareas td a:hover {
+    color: #007BFF; 
 }

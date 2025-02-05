@@ -6,5 +6,11 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
+    background-image: url('../img/Calendario.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
 
 }

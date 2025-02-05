@@ -27,6 +27,7 @@
         <a href="index.php">Inicio</a>
         <a href="registro.php">Registro</a>
         <a href="login.php">Login</a>
+        <a href="task.php">Tareas</a>
 
     </nav>
 
