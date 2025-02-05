@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/registro.css">
     <link rel="stylesheet" href="css/task.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 
 <body>
