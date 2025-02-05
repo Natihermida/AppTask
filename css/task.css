@@ -42,6 +42,7 @@
     border-collapse: collapse;
 }
 .logoutEdit{
+    background-color: #4CAF50;
     display: flex;
    justify-content: right;
    text-align: center;
