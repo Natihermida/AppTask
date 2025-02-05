@@ -1,8 +1,8 @@
 <?php
-if(isset($_POST["fecha"])){
+if(isset($_POST["fecha_inicio"])){
     session_start();
     include("conexiondb.php");
-    $idusuario = $_SESSION['idusuario'];
+    $idusuario = $_SESSION['id'];
     $titulo= $_POST["titulo"];
     $descripcion = $_POST["descripcion"];
     $fecha = $_POST["fecha_inicio"];
