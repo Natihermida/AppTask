@@ -1,0 +1,46 @@
+.registro{
+    display: flex;
+    margin: 0;
+    background-image: url('../img/Calendario.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 700px;
+    }
+section form{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 40%;
+    max-height: 90vh; 
+    overflow: auto; 
+}
+form label, form input{
+    height: 30px;
+    width: 80%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+form input[type="submit"]{
+    width: 40%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+form p{
+color: red;
+    font-size: 16px;
+}

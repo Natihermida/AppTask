@@ -1,12 +1,5 @@
 <?php
-session_start();
-if (isset($_SESSION["username"])) {
-    $username = $_SESSION["username"];
-} else {
-    header("Location: index");
-    exit();
-}
-include("conexiondb.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +10,7 @@ include("conexiondb.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejemplo de Página Web</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/registro.css">
 </head>
 
 <body>
@@ -25,9 +19,9 @@ include("conexiondb.php");
         <img src="img/tareas.jpg" alt="logo Task">
     </header>
     <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Registro</a>
-        <a href="#">Login</a>
+        <a href="index.php">Inicio</a>
+        <a href="registro.php">Registro</a>
+        <a href="login.php">Login</a>
     </nav>
 
   

@@ -4,8 +4,7 @@ include 'partials/cabecera.php';
 
 ?>
 
-    <section>
-        <main>
+        <main class="inicio">
             <h2>¡Bienvenido a AppTask!</h2>
             <p>AppTask es una aplicación web que te permite organizar tus tareas de una forma sencilla y eficiente.</p>
             <p>Con AppTask podrás:</p>
@@ -17,7 +16,6 @@ include 'partials/cabecera.php';
             <p>¡Regístrate y comienza a organizar tus tareas con AppTask!</p>
             
         </main>
-    </section>
     <?php
     include 'partials/footer.php';
     ?>
