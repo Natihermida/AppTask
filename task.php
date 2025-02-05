@@ -8,6 +8,9 @@ $sql = "select * from tareas where usuarios_id = " . $_SESSION["id"];
 $result = $conexion->query($sql);
 include("./partials/cabecera.php");
 ?>
+<div>
+    <a href="logout.php">Cerrar sesión</a>
+</div>
 <section class="containerTask">
     <h3>Tareas</h3>
     <div class="contenedordivs">
