@@ -50,6 +50,10 @@ include("./partials/cabecera.php");
                             <td>" . $row['fecha_inicio'] . "</td>
                             <td>" . $row['fecha_fin'] . "</td>
                             <td>" . $row['estado'] . "
+                              <td>
+                                <a href='borrar_tareas.php?tareas_id=".$row['tareas_id']."'><i class='fa-solid fa-trash'></i></a>
+                                <a href='editar_tareas.php?tareas_id=".$row['tareas_id']."'<i class='fa-solid fa-pen-to-square'></i></a>
+                            </td>
                             </td>                            </tr>";
                 }
                 ?>
