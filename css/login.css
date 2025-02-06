@@ -14,3 +14,20 @@
     overflow: hidden;
 
 }
+/* Media queries para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .login {
+        background-attachment: scroll; /* Evita el fondo fijo en pantallas pequeñas para mejorar el rendimiento */
+        height: auto; /* Ajusta la altura del contenedor para evitar desbordamientos */
+        padding: 20px;
+         /* Agrega espacio en los bordes para evitar que el contenido se quede pegado al borde */
+         height: 100vh;
+    }
+}
+
+/* Media queries para pantallas muy pequeñas (dispositivos móviles) */
+@media (max-width: 480px) {
+    .login {
+        padding: 10px; /* Reduce el padding en pantallas muy pequeñas */
+    }
+}

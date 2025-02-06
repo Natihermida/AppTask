@@ -78,3 +78,46 @@ footer {
     bottom: 0;
 }
 
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header img {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    header h1 {
+        margin-left: 0;
+        font-size: 1.2rem;
+    }
+
+    nav a {
+        padding: 0.5rem;
+        width: 100%;
+        text-align: center;
+    }
+    
+    main {
+        padding: 2rem;
+    }
+}
+
+/* Media queries para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1rem;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+}

@@ -44,3 +44,45 @@ form p{
 color: red;
     font-size: 16px;
 }
+/* Media queries para pantallas pequeñas (tabletas) */
+@media (max-width: 768px) {
+    .registro {
+        height: auto; /* Ajusta la altura del contenedor para evitar desbordamientos */
+        padding: 20px; /* Añade padding para que el contenido no esté pegado a los bordes */
+        background-attachment: scroll; /* Evita el fondo fijo en pantallas pequeñas */
+    }
+
+    section form {
+        width: 80%; /* Amplía el formulario para que ocupe más espacio */
+        padding: 15px;
+    }
+
+    form input[type="submit"] {
+        width: 60%; /* Hace que el botón de envío sea más grande en pantallas pequeñas */
+    }
+}
+
+/* Media queries para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+    .registro {
+        height: auto; /* Evita que el contenedor tenga una altura fija */
+        padding: 10px; /* Reduce el padding para pantallas muy pequeñas */
+    }
+
+    section form {
+        width: 90%; /* El formulario ocupa casi todo el ancho de la pantalla */
+        padding: 10px;
+    }
+
+    form input[type="submit"] {
+        width: 80%; /* El botón de envío ocupa un mayor porcentaje del ancho */
+    }
+
+    form label, form input {
+        width: 100%; /* Hace que los inputs y labels ocupen todo el ancho disponible */
+    }
+
+    form p {
+        font-size: 14px; /* Reduce el tamaño del mensaje de error */
+    }
+}

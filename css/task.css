@@ -93,3 +93,93 @@
 #tablaTareas td a:hover {
     color: #007BFF; 
 }
+/* Media queries para pantallas pequeñas (tabletas y móviles) */
+@media (max-width: 768px) {
+    .tareas {
+        width: 100%; /* Las tareas ocupan todo el ancho en pantallas medianas */
+        margin-bottom: 20px;
+    }
+
+    .contenedordivs {
+        gap: 15px;
+    }
+
+    .logoutEdit a {
+        font-size: 16px;
+    }
+
+    #tablaTareas th, #tablaTareas td {
+        font-size: 14px; /* Ajuste del tamaño de la fuente de la tabla */
+    }
+}
+
+/* Media queries para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+    .tareas {
+        width: 100%; 
+        margin-bottom: 10px;
+    }
+
+    .lista {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .contenedordivs {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #tablaTareas {
+        font-size: 12px; 
+    }
+
+    #tablaTareas td a {
+        font-size: 14px; 
+    }
+
+    .logoutEdit a {
+        font-size: 14px; 
+    }
+}
+@media (max-width: 768px) {
+    body {
+        overflow-y: scroll; /* Forzar el desplazamiento si es necesario */
+    }
+
+    .containerTask {
+        overflow-y: auto; /* Asegurar que esta sección también sea desplazable */
+        max-height: calc(100vh - 50px); /* Dejar espacio para otros elementos, si es necesario */
+    }
+
+    /* Si deseas hacer que el formulario también sea desplazable en móviles */
+    form {
+        overflow-y: auto;
+    }
+}
+@media (max-width: 768px) {
+    #tablaTareas th, #tablaTareas td {
+        font-size: 12px; /* Reducir el tamaño de la fuente */
+        padding: 8px; /* Ajustar el padding para que se vea bien */
+    }
+
+    /* Establecer un ancho máximo para la tabla en dispositivos móviles */
+    .lista {
+        overflow-x: auto; /* Asegurarse de que haya desplazamiento horizontal */
+        width: 100%; /* La lista ocupa todo el ancho disponible */
+    }
+
+    #tablaTareas {
+        width: 100%;
+        max-width: 100%; /* Asegura que la tabla no se desborde */
+        table-layout: auto; /* Ajustar el tamaño de las celdas según el contenido */
+    }
+
+    /* Ajustar las celdas para pantallas pequeñas */
+    #tablaTareas td {
+        font-size: 12px; /* Reducir tamaño de texto */
+        white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
+        overflow: hidden;
+        text-overflow: ellipsis; /* Añadir puntos suspensivos para el texto largo */
+    }
+}
