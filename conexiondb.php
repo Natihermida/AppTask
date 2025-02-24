@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
 $user = "root";
-$password = "123456";
+$password = "";
 $database = "apptask";
 try {
     $conexion = new PDO("mysql:host=$host;dbname=$database", $user, $password);
